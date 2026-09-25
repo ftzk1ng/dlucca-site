@@ -139,7 +139,7 @@
 
   <section class="trust" aria-label="Diferenciais">
     <div class="wrap">
-      <ul>
+      <ul class="reveal">
         <li><span class="ico-chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-zap"/></svg></span>Atendimento rápido</li>
         <li><span class="ico-chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-clipboard-check"/></svg></span>Orçamento sem compromisso</li>
         <li><span class="ico-chip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-building-2"/></svg></span>Residências, condomínios e empresas</li>
@@ -290,6 +290,14 @@
 <script>
 (function(){
   var d=document.documentElement; d.classList.add('js');
+
+  var header=document.querySelector('.site-header');
+  if(header){
+    var onScroll=function(){ header.classList.toggle('scrolled', window.scrollY>8); };
+    onScroll();
+    addEventListener('scroll', onScroll, {passive:true});
+  }
+
   var els=[].slice.call(document.querySelectorAll('.reveal'));
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var vh=innerHeight;
