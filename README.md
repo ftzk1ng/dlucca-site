@@ -22,13 +22,13 @@ robots.txt, sitemap.xml
 **Textos:** direto no `index.html`. Cada seção é uma `<section>` com comentário/`id` (`servicos`, `como-funciona`, `galeria`, `contato`). Mantenha um único `<h1>`.
 
 **Número / mensagem do WhatsApp:** todos os botões usam
-`https://wa.me/554896136561?text=...` (mensagem codificada em URL, ex.: espaço = `%20`, `á` = `%C3%A1`).
-Para trocar o número, busque e substitua `554896136561` no `index.html` e no `404.html`, e o telefone exibido `(48) 9613-6561` no rodapé e no schema (`"telephone"`).
+`https://wa.me/5548996136561?text=...` (mensagem codificada em URL, ex.: espaço = `%20`, `á` = `%C3%A1`).
+Para trocar o número, busque e substitua `5548996136561` no `index.html` e no `404.html`, e o telefone exibido `(48) 99613-6561` no rodapé e no schema (`"telephone"`).
 
 **Instagram:** no rodapé, procure `data-todo="[INSTAGRAM]"` e troque o `href` pelo perfil (ex.: `https://www.instagram.com/dlucca.dedetizadora/`). Depois, adicione o mesmo link no schema JSON-LD do `<head>`:
 `"sameAs": ["https://www.instagram.com/..."]`.
 
-**Depoimentos:** procure `[Depoimentos reais do Google serão inseridos aqui]` e substitua por depoimentos reais (nunca inventados).
+**Depoimentos:** procure `<div class="testimonials">` no `index.html`. Cada avaliação é um `<figure class="testimonial reveal">` com estrelas, texto (`<blockquote>`) e nome (`<figcaption>`). Para adicionar/trocar, copie um bloco existente — nunca invente depoimentos, use só avaliações reais do Google.
 
 **Fotos:** coloque a nova foto em `assets/img/` (WebP, até ~1000px no lado maior, qualidade ~72) e troque o `src`, `width`, `height` e o `alt` descritivo no `index.html`. Exemplo de conversão:
 `cwebp -q 72 -resize 0 1000 foto.jpg -o assets/img/nova-foto.webp`
