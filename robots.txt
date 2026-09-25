@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ftzk1ng.github.io/dlucca-site/sitemap.xml
+Sitemap: https://dedetizadoradlucca.com.br/sitemap.xml
