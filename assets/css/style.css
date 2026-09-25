@@ -66,8 +66,10 @@ p{margin:0}
   radial-gradient(520px 420px at 76% 38%,rgba(123,47,208,.38),transparent 70%),
   radial-gradient(420px 320px at 12% 10%,rgba(90,18,168,.22),transparent 70%);pointer-events:none}
 .hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px}
 .tag{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(123,47,208,.14);border:1px solid rgba(166,107,224,.3);color:var(--lilac-text);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .tag .ico{width:16px;height:16px}
+.tag-24h{background:rgba(37,211,102,.12);border-color:rgba(37,211,102,.35);color:#6FE39C}
 .hero h1{margin-top:22px;font-size:clamp(36px,5.4vw,70px);line-height:1.03;font-weight:800;letter-spacing:-.035em;background:linear-gradient(175deg,#FFFFFF 10%,#E3E0EA 45%,#A9A4B6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;max-width:16ch}
 .hero .lead{margin-top:22px;font-size:clamp(16px,1.35vw,19px);color:var(--muted);max-width:52ch;line-height:1.6}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
@@ -115,7 +117,8 @@ p{margin:0}
 .card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,14,18,0) 25%,rgba(14,14,18,.72) 60%,rgba(14,14,18,.96) 100%)}
 .card-body{padding:26px}
 .card-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.card-top .ico-chip{width:36px;height:36px;border-radius:10px;background:rgba(14,14,18,.6);backdrop-filter:blur(6px)}
+.card-top .ico-chip{width:36px;height:36px;border-radius:10px;background:rgba(14,14,18,.6);backdrop-filter:blur(6px);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.card:hover .card-top .ico-chip{transform:scale(1.14) rotate(-6deg)}
 .card h3{font-size:22px;font-weight:700}
 .card p{color:#C9C6D2;font-size:15px;max-width:40ch;line-height:1.5}
 .card-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;min-height:44px;font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--lilac-text);transition:gap .2s,color .2s}
